@@ -18,17 +18,17 @@ getFullname() {
         return dateOfDiffMilli.getFullYear() - 1970;
     }
 isEqual(anotherPerson){
-        return (this.firstName.toLowercase() === anotherPerson.firstName.toLowercase()
+        return (this.firstName?.toLowerCase() === anotherPerson?.firstName?.toLowerCase()
             &&
-            this.lastName.toLowercase() === anotherPerson.lastName.toLowercase())
+            this.lastName?.toLowerCase() === anotherPerson?.lastName?.toLowerCase())
     }
 toString(){
 
     }
 }
-
+const person1 = new person('best','tanaporn', new Date(2004,2,11))
 const me = new person('Team','Thuanchamnan',new Date(2003,10,23)) // new object
-console.log(me)
+console.log(me.isEqual(person1))
     
 
 
